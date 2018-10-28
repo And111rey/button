@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+
+
+</head>
+	
+<body>
+
+	<div id="123"> Hello it is test string</div>
+	<hr/>
+
+	<input type="button" onclick="red()" value="RED"/>
+	<input type="button" onclick="green()" value="GREEN"/>
+	<input type="button" onclick="grey()" value="SILVER"/>
+	
+	<input type="button" onclick="offcolor()" value="OFF color"/>
+	<hr/>
+	<div id="122"> проверка через "confirm"</div>
+	
+	
+	<script>//********************************training with "BUTTON"********************************************************************** 
+		var divE = document.getElementById("123");
+		
+		function red () {
+			return divE.style.background = "red";
+		}
+		
+		function green () {
+			return divE.style.background = "green";
+		}
+		function grey () {
+			return divE.style.background = "silver";
+		}
+	
+	function offcolor () {
+			return divE.style.background = "";
+		}
+
+	
+	
+//***********************************************************************************************************************
+	</script>
+	<script>//**************************************set color with "confirm"****************************************************************
+//
+
+	
+		var color = confirm("are you whant take color for tag <div>?");
+		
+			if (color == true) {
+					document.getElementById("122").style.background = "blue";
+				} else {document.getElementById("122").style.background = "green"};
+	
+	
+	
+
+
+
+	</script>
+	
+	
+	<div id="111"> This string was created for work with "setTime our"</div>
+	<input type="button" onclick="setRandomColor()" value="RANDOM COLOR"/>
+	<input type="button" onclick="setRandomColorOff()" value="OFF"/>
+	<script> 
+	
+	var arr = ["red", "yellow", "blue", "green", "orange"];
+	var randomColor = arr[Math.floor(Math.random() * arr.length)];
+	
+	function setRandomColor () {
+		for (var i = 1; i <10; i++) {
+		document.getElementById("111").style.background = randomColor;
+		}
+	}
+	
+	function setRandomColorOff () {
+		document.getElementById("111").style.background = "";
+	}
+	
+	
+	
+	
+	
+	
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
